@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    String url = "http://morinozoo.php.xdomain.jp/test.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            new AsyncHttpRequest(MainActivity.this).execute("http://morinozoo.php.xdomain.jp/test.php");
+            new AsyncHttpRequest(MainActivity.this).execute(url);
             }
         });
     }
